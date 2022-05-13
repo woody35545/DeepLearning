@@ -2,9 +2,13 @@ import numpy as np
 import csv  # for data load
 import time
 
+# Data File Path
+    DATASET_PATH = "./DataSet/abalone.csv" # Abalone DataSet
+    
 # Hyper Parameters
 RND_MEAN = 0  # 정규분포 난수값의 평균
 RND_STD = 0.0030  # 정규분포 난수값의 표준편차
+LEARNING_RATE = 0.001 # Learning Rate
 
 
 # main function
@@ -18,12 +22,13 @@ def exec(epoch_count=10, mb_size=10, report=1):
 
 
 def load_dataset():
-    with open("./DataSet/abalone.csv") as csvfile:
+    with open(DATASET_PATH) as csvfile:
         csvreader = csv.reader(csvfile)
         next(csvreader, None)
         rows = []
         for row in csvreader:
             rows.append[row]
+            
     None
 
 
